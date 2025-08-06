@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز التقييم العلمي للإدمان</title>
+    <link rel="stylesheet" href="addiction_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>مركز التقييم العلمي للإدمان</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#about" class="nav-link">حول المركز</a>
+                <a href="#contact" class="nav-link">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h2 class="hero-title">تقييم علمي دقيق لمستوى الإدمان</h2>
+                        <p class="hero-subtitle">
+                            منصة علمية متخصصة لتقييم مستوى الإدمان وتقديم خطط علاجية مخصصة بناءً على أحدث الأبحاث العلمية
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-users"></i>
+                                <span class="stat-number">15,000+</span>
+                                <span class="stat-label">شخص تم تقييمه</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span class="stat-number">92%</span>
+                                <span class="stat-label">معدل نجاح العلاج</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-award"></i>
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">أنواع تقييم</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="showAddictionTypes()">
+                            <i class="fas fa-play"></i>
+                            ابدأ التقييم الآن
+                        </button>
+                    </div>
+                    <div class="hero-image">
+                        <div class="medical-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Addiction Types Selection -->
+        <section id="addiction-types" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">اختر نوع التقييم</h2>
+                    <p class="section-subtitle">حدد نوع الإدمان الذي تريد تقييمه للحصول على تحليل علمي دقيق</p>
+                </div>
+                
+                <div class="addiction-cards">
+                    <div class="addiction-card" onclick="startAssessment('phone')">
+                        <div class="card-icon phone-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="card-title">إدمان الهاتف الذكي</h3>
+                        <p class="card-description">
+                            تقييم مستوى الاعتماد على الهاتف الذكي وتأثيره على الحياة اليومية والعلاقات الاجتماعية
+                        </p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 5-7 دقائق</span>
+                            <span><i class="fas fa-question-circle"></i> 15 سؤال</span>
+                        </div>
+                        <button class="card-btn">ابدأ التقييم</button>
+                    </div>
+
+                    <div class="addiction-card" onclick="startAssessment('porn')">
+                        <div class="card-icon porn-icon">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <h3 class="card-title">إدمان المحتوى الإباحي</h3>
+                        <p class="card-description">
+                            تقييم علمي لمستوى الاعتماد على المحتوى الإباحي وتأثيره على الصحة النفسية والعلاقات
+                        </p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 4-6 دقائق</span>
+                            <span><i class="fas fa-question-circle"></i> 12 سؤال</span>
+                        </div>
+                        <button class="card-btn">ابدأ التقييم</button>
+                    </div>
+
+                    <div class="addiction-card" onclick="startAssessment('smoking')">
+                        <div class="card-icon smoking-icon">
+                            <i class="fas fa-smoking-ban"></i>
+                        </div>
+                        <h3 class="card-title">إدمان التدخين</h3>
+                        <p class="card-description">
+                            تقييم مستوى الاعتماد على النيكوتين باستخدام مقياس فاجرستروم العلمي المعتمد دولياً
+                        </p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 3-5 دقائق</span>
+                            <span><i class="fas fa-question-circle"></i> 10 أسئلة</span>
+                        </div>
+                        <button class="card-btn">ابدأ التقييم</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary" onclick="showHome()">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة للرئيسية
+                </button>
+            </div>
+        </section>
+
+        <!-- Assessment Section -->
+        <section id="assessment" class="section">
+            <div class="container">
+                <div class="assessment-header">
+                    <h2 id="assessment-title" class="section-title"></h2>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                        <span id="progress-text" class="progress-text">1 / 15</span>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div id="question-card" class="question-card">
+                        <h3 id="question-text" class="question-text"></h3>
+                        <div id="question-options" class="question-options"></div>
+                    </div>
+                </div>
+
+                <div class="assessment-controls">
+                    <button id="prev-btn" class="btn btn-secondary" onclick="previousQuestion()" disabled>
+                        <i class="fas fa-arrow-right"></i>
+                        السؤال السابق
+                    </button>
+                    <button id="next-btn" class="btn btn-primary" onclick="nextQuestion()" disabled>
+                        السؤال التالي
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button id="finish-btn" class="btn btn-success" onclick="finishAssessment()" style="display: none;">
+                        <i class="fas fa-check"></i>
+                        إنهاء التقييم
+                    </button>
+                </div>
+
+                <button class="btn btn-secondary" onclick="showAddictionTypes()">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة لاختيار النوع
+                </button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="section">
+            <div class="container">
+                <div class="results-header">
+                    <h2 class="section-title">نتائج التقييم العلمي</h2>
+                    <p class="section-subtitle">تحليل شامل لمستوى الإدمان مع خطة علاجية مخصصة</p>
+                </div>
+
+                <div class="results-content">
+                    <div class="result-card main-result">
+                        <div class="result-icon">
+                            <i id="result-icon" class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3 id="addiction-type-result" class="result-title"></h3>
+                        <div class="score-container">
+                            <div class="score-circle">
+                                <canvas id="scoreChart" width="200" height="200"></canvas>
+                                <div class="score-text">
+                                    <span id="score-percentage" class="score-number">0%</span>
+                                    <span class="score-label">مستوى الإدمان</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="result-level" class="result-level"></div>
+                        <p id="result-description" class="result-description"></p>
+                    </div>
+
+                    <div class="treatment-plan">
+                        <h3 class="plan-title">
+                            <i class="fas fa-clipboard-list"></i>
+                            الخطة العلاجية المخصصة
+                        </h3>
+                        <div id="treatment-content" class="treatment-content"></div>
+                    </div>
+
+                    <div class="recommendations">
+                        <h3 class="recommendations-title">
+                            <i class="fas fa-lightbulb"></i>
+                            توصيات إضافية
+                        </h3>
+                        <div id="recommendations-content" class="recommendations-content"></div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn-primary" onclick="printResults()">
+                        <i class="fas fa-print"></i>
+                        طباعة التقرير
+                    </button>
+                    <button class="btn btn-secondary" onclick="startNewAssessment()">
+                        <i class="fas fa-redo"></i>
+                        تقييم جديد
+                    </button>
+                    <button class="btn btn-secondary" onclick="showHome()">
+                        <i class="fas fa-home"></i>
+                        العودة للرئيسية
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">حول مركز التقييم العلمي للإدمان</h2>
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <i class="fas fa-microscope"></i>
+                            <h3>منهجية علمية</h3>
+                            <p>نستخدم أحدث الأبحاث العلمية والمقاييس المعتمدة دولياً في تقييم مستوى الإدمان</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-user-md"></i>
+                            <h3>خبرة طبية</h3>
+                            <p>تم تطوير المنصة بالتعاون مع أطباء نفسيين وخبراء في علاج الإدمان</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>سرية تامة</h3>
+                            <p>جميع البيانات محمية ولا يتم حفظها على الخوادم، التقييم مجهول بالكامل</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>نتائج دقيقة</h3>
+                            <p>نظام تقييم متطور يوفر نتائج دقيقة وخطط علاجية مخصصة لكل حالة</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" onclick="showHome()">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة للرئيسية
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مركز التقييم العلمي للإدمان</h3>
+                    <p>منصة علمية متخصصة لتقييم وعلاج الإدمان بأحدث الطرق العلمية</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط مهمة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">حول المركز</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>إخلاء مسؤولية</h4>
+                    <p>هذا التقييم لأغراض تعليمية وإرشادية فقط ولا يغني عن استشارة طبية متخصصة</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مركز التقييم العلمي للإدمان. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="addiction_script.js"></script>
+</body>
+</html>
+
